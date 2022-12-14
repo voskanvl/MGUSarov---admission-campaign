@@ -1,0 +1,18 @@
+.atmosphere
+    .atmosphere__back
+    .atmosphere__back.atmosphere__back--turn
+    img.atmosphere__formula.atmosphere__svg(src="../../../assets/svg/atmosphere/t-2t-mc2.svg")
+    .atmosphere__images#building-paper-circle-out
+        img.atmosphere__img(src="../../../assets/images/atmosphere/atmosphere.png")
+    .atmosphere__content 
+        .atmosphere__text 
+            img.atmosphere__quotes.atmosphere__svg(src="../../../assets/svg/atmosphere/quotes.svg")
+            p!= atmosphere[0]
+            .atmosphere__images#building-paper-circle-in
+                img.atmosphere__img(src="../../../assets/images/atmosphere/atmosphere-mobile.png")
+                img.atmosphere__img#since-circle(src="../../../assets/svg/atmosphere/circle.svg")
+            p!= atmosphere[1]
+            .atmosphere__images 
+                img.atmosphere__img#building-in(src="../../../assets/images/atmosphere/building.jpg")
+            p!= atmosphere[2]
+    img#building-out(src="../../../assets/images/atmosphere/building.jpg")
