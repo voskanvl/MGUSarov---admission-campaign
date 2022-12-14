@@ -1,0 +1,29 @@
+.curriculum
+    background-color: #126B89
+    height: 2000px
+    padding-top: 200px
+    margin-top: -200px
+    color: #fff
+    @media ($MOBILE)
+        padding-top: 350px
+
+    &__container
+        padding: 0 16px
+        display: grid
+
+        @media ($DESCTOP)
+            grid-template-columns: 1fr 2fr
+
+    &__direction
+        @media ($DESCTOP)
+            grid-area: 1 / 1 / 2 / 2
+
+    &__title
+        font-weight: 800
+        font-size: 54px
+        line-height: 120%
+        letter-spacing: -0.01em
+        padding: 32px 0 24px
+
+    &__list
+        padding-left: 1.5em

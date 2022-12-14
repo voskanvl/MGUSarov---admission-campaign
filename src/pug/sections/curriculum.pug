@@ -1,0 +1,15 @@
+.curriculum
+    .curriculum__container 
+        .curriculum__direction.direction 
+            .direction__left
+                .direction__value 3
+                .direction__caption направления <wbr>подготовки
+            .direction__right
+                img.direction__icon(src="../../../assets/svg/сurrriculum/icon.svg")
+        .curriculum__learning 
+            h2.curriculum__title Программы обучения
+            .curriculum__context
+                strong Обучение в МГУ Саров ведется по шести магистерским образовательным программам в рамках трех направлений подготовки:
+                ul.curriculum__list
+                    each i in curriculum
+                        li.list-item= i
