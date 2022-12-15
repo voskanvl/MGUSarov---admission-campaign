@@ -14,15 +14,22 @@
             top: 0
         &#dowhat-background
             top: 0
-    &__back
-        width: 100%
-        height: 100%
-        background-image: url("../../../assets/images/Ripped_White_Paper_8 6.png")
-        background-repeat: no-repeat
-        background-size: 100% 100%
-        &--1
-            background-image: url("../../../assets/images/Ripped_White_Paper_8 14.png")
 
+    &__back
+        height: 260vh
+        background-image: url("../../../assets/images/Ripped_White_Paper_8 14.png")
+
+    .choice .ncfm__back
+        height: 100vh
+    // &__back
+    //     width: 100%
+    //     height: 100%
+    //     background-image: url("../../../assets/images/Ripped_White_Paper_8 6.png")
+    //     background-repeat: no-repeat
+    //     // background-size: 100% 100%
+    //     &--1
+    //         background-image: url("../../../assets/images/Ripped_White_Paper_8 14.png")
+    //         background-repeat: repeat-y
     &__desc
         position: absolute
         z-index: 0
@@ -48,7 +55,8 @@
         font-size: clamp(36px, 54/768*100vw,54px)
         line-height: 120%
         letter-spacing: -0.01em
-        text-align: center
+        // text-align: center
+        padding: 0 5px
         margin-bottom: clamp(24px,31/768*100vw,31px)
         @media ($DESCTOP)
             grid-column: 2 / span 1
@@ -98,32 +106,6 @@
             @media ($DESCTOP)
                 display: none
 
-    #Rutherford
-        +wid(375px)
-        @media ($DESCTOP)
-            width: min(728/1440*100vw,728px)
-            position: absolute
-            z-index: -1
-            left: -35vw
-            top: -370px
-            margin: unset
-
-    #choice-image
-        @media ($DESCTOP)
-            grid-row: 6 / span 1
-
-    #choice-science
-        left: 312px
-
-    #choice-formula
-        right: 83px
-
-    #choice-quotes
-        position: absolute
-        width: clamp(82px,172/1024*100vw,172px)
-        top: -100%
-        right: 0
-
     &__lead
         font-style: italic
         font-size: clamp(20px,24/1024*100vw,24px)
@@ -143,3 +125,51 @@
             @media ($DESCTOP)
                 grid-area: 3 / 1 / 4 / 2
                 align-self: center
+
+#Rutherford
+    +wid(375px)
+    @media ($DESCTOP)
+        width: min(728/1440*100vw,728px)
+        position: absolute
+        z-index: -1
+        left: -35vw
+        top: -370px
+        margin: unset
+
+#choice-image
+    @media ($DESCTOP)
+        grid-row: 6 / span 1
+
+#choice-science
+    left: 312px
+
+#choice-formula
+    right: 83px
+
+#choice-quotes
+    position: absolute
+    width: clamp(82px,172/1024*100vw,172px)
+    top: -100%
+    right: 0
+
+#universiada-img
+    @media ($DESCTOP)
+        grid-area: 2 / 1 / 4 / 2
+
+.big-blue-square
+    color: #fff
+    background: url("../../../assets/images/universiada/bbs.jpg")
+    background-size: cover
+    background-position: 100% 100%
+    background-repeat: no-repeat
+    @media ($DESCTOP)
+        padding: calc(80/1920*100vw) calc(110/1920*100vw)
+
+    &__root
+        @media ($DESCTOP)
+            grid-area: 4 / 2 / 5 / -1
+
+#universiada-scrap
+    position: absolute
+    left: -400px
+    top: -100px
