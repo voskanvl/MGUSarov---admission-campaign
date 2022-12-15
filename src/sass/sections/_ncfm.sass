@@ -126,6 +126,22 @@
                 grid-area: 3 / 1 / 4 / 2
                 align-self: center
 
+    &.universiada
+        padding: 0 16px
+
+        & .direction
+            color: #126B89
+            background: #fff
+            border: 1px solid rgb(#126B89, 20%)
+            & .direction__icon
+                filter: invert(1)
+
+            @media ($DESCTOP)
+                margin-top: 20px
+                grid-area: 5 / 1 / 6 / 2
+                align-self: start
+                justify-self: center
+
 #Rutherford
     +wid(375px)
     @media ($DESCTOP)
