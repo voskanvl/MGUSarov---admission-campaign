@@ -1,6 +1,8 @@
+$D1149: "width > 1149px"
 .curriculum
     background-color: #126B89
     padding-top: 200px
+    padding-bottom: 170px
     margin-top: -200px
     color: #fff
     @media ($MOBILE)
@@ -13,14 +15,14 @@
         & > *
             padding: 0 16px
 
-        @media ($DESCTOP)
+        @media ($D1149)
             grid-template-columns: 1fr 2fr
             width: min(1295px,98%)
             margin: 0 auto
 
     &__direction
         margin: 0 16px
-        @media ($DESCTOP)
+        @media ($D1149)
             grid-area: 1 / 1 / 2 / 2
             align-self: start
             justify-self: end
@@ -37,15 +39,16 @@
         padding-left: 1.5em
 
     &__img
-        width: 100%
-        @media ($DESCTOP)
+        width: min(375px,100%)
+        margin: 0 auto
+        @media ($D1149)
             position: absolute
             width: unset
         &--1
-            @media ($DESCTOP)
+            @media ($D1149)
                 top: 40%
         &--2
-            @media ($DESCTOP)
+            @media ($D1149)
                 top: 65%
                 left: 70px
 
@@ -54,7 +57,7 @@
         flex-direction: column
         row-gap: 16px
         line-height: 30px
-        @media ($DESCTOP)
+        @media ($D1149)
             grid-column: 2 / span 1
 
     &__scrap
@@ -66,7 +69,7 @@
         & > .curriculum__context
             rotate: 0
             z-index: 2
-        @media ($DESCTOP)
+        @media ($D1149)
             overflow: visible
 
     &__scrap-image
@@ -78,7 +81,7 @@
         left: -25%
         object-fit: cover
         top: 0
-        @media ($DESCTOP)
+        @media ($D1149)
             bottom: unset
             top: -100px
             width: 100%
