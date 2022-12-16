@@ -43,11 +43,11 @@
 
     h2.ncfm__title
         font-weight: 800
-        font-size: clamp(36px, 54/768*100vw,54px)
+        font-size: clamp(35px, 54/768*100vw,54px)
         line-height: 120%
         letter-spacing: -0.01em
         // text-align: center
-        padding: 0 5px
+        padding: 0 16px
         margin-bottom: clamp(24px,31/768*100vw,31px)
         @media ($DESCTOP)
             grid-column: 2 / span 1
@@ -126,6 +126,8 @@
         padding-top: 0
     &.universiada
         padding: 150px 16px 0
+        @media ($MOBILE)
+            padding-top: 60px
 
         & .direction
             color: #126B89
