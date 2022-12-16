@@ -154,6 +154,19 @@
     &.comfort
         padding-bottom: 9vw
 
+div.ncfm.virus
+    background-color: #126B89
+    padding-bottom: 28vw
+    @media ($DESCTOP)
+        padding-bottom: 19vw
+        padding-top: 0
+    @media (width < 1440px)
+        padding-top: 3vw
+    @media (width < 1024px)
+        padding-top: 9vw
+    @media ($MOBILE)
+        padding-top: 12vw
+
 #atmosphere-quotes
     position: absolute
     width: clamp(104px,190/1024*100vw,190px)
@@ -173,6 +186,29 @@
     @media ($MOBILE)
         right: 0
         top: -53px
+
+#virus-paper
+    position: absolute
+    top: -240px
+    left: -200px
+
+#virus-virus
+    & > img
+        position: absolute
+        left: -15vw
+        top: -9vw
+        @media ($MOBILE)
+            +wid(375px)
+            top: -20px
+            left: 0
+
+    @media ($DESCTOP)
+        grid-column: 1 /span 1
+
+#virus-k-s
+    position: absolute
+    top: 0px
+    left: 10vw
 
 #main-building
     @media ($DESCTOP)
