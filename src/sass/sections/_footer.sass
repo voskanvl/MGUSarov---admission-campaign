@@ -6,9 +6,8 @@
         display: flex
         flex-wrap: wrap-reverse
         row-gap: 24px
-        // @media ($MOBILE)
-        //     padding-inline: 16px
-        //     justify-content: center
+        flex-direction: column-reverse
+        align-items: center
 
     &__logo
         filter: invert(1)
@@ -23,11 +22,14 @@
         column-gap: calc(24/1920*100vw)
         font-size: 16px
         font-weight: 400
-        align-items: baseline
+        align-items: center
+        flex-direction: column-reverse
+        & > p
+            text-align: center
 
     &__right
         @media ($MOBILE)
             order: 0
 
     & .logo
-        justify-content: flex-start
+        justify-content: center
