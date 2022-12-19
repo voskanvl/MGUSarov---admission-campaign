@@ -28,10 +28,11 @@
             display: none
 
     &__lines-desc
-        top: 360px
+        top: calc(720/1920*100%)
 
     &__bomb
         top: 100px
+        width: 33%
 
     &__content
         // padding: 0 16px
@@ -39,7 +40,7 @@
         +wid(1296px,100%)
         display: grid
         @media ($DESCTOP)
-            grid-template-columns: 1fr 57.8% 110px
+            grid-template-columns: 1fr 57.8% calc(106/1296*100%)
 
     h2.ncfm__title
         font-weight: 800
@@ -85,10 +86,11 @@
 
     &__img
         display: block
-        width: 98%
+        // width: 98%
         margin: 0 auto
 
         &--desctop
+            +wid($MAX_WIDTH, 100%)
             @media ($MOBILE)
                 display: none
 
@@ -116,6 +118,18 @@
             @media ($DESCTOP)
                 grid-area: 3 / 1 / 4 / 2
                 align-self: center
+
+    &__shift
+        width: 100%
+        position: absolute
+        right: 134px
+
+        @media (width < 1544px)
+            right: 0
+
+        @media ($MOBILE)
+            position: static
+            width: unset
 
     &.ncfm
         padding-top: 8vw
@@ -150,10 +164,12 @@
 
     &.atmocphere
         padding-top: 150px
+        padding-bottom: 100px
         & > .ncfm__background
             top: -141px
 
     &.comfort
+        padding-top: 64px
         padding-bottom: 9vw
 
 div.ncfm.virus
@@ -168,6 +184,16 @@ div.ncfm.virus
         padding-top: 9vw
     @media ($MOBILE)
         padding-top: 12vw
+
+#atmocphere-science
+    position: absolute
+    z-index: 0
+    bottom: -0.8%
+    right: 0
+    width: 80%
+    @media ($MOBILE)
+        width: 80%
+        bottom: -18px
 
 #atmosphere-quotes
     position: absolute
@@ -184,20 +210,23 @@ div.ncfm.virus
     width: clamp(165px,403/1024*100vw,403px)
     z-index: -1
     top: -100px
-    right: -100px
+    right: 110px
     @media ($MOBILE)
         right: 0
         top: -53px
 
 #virus-paper
     position: absolute
-    top: -240px
-    left: -200px
+    top: -210px
+    left: -290px
+    @media ($MOBILE)
+        top: -180px
+        height: 700px
 
 #virus-quotes
     position: absolute
-    top: -120px
-    left: -80px
+    top: -70px
+    left: -170px
     @media ($MOBILE)
         top: -50px
         left: 0
@@ -223,11 +252,18 @@ div.ncfm.virus
     left: 10vw
 
 #main-building
+    & > img
+        width: 130%
+        right: 0
+        @media (width < 1573px)
+            width: 100%
+
     @media ($DESCTOP)
         grid-area: 1/1/3/2
-        position: absolute
-        width: 646px
-        left: -50%
+        // position: absolute
+        // width: 646px
+        width: 100%
+        // left: -50%
 
 #Rutherford
     +wid(375px)
@@ -235,7 +271,7 @@ div.ncfm.virus
         width: min(728/1440*100vw,728px)
         position: absolute
         z-index: -1
-        left: -35vw
+        left: -48vw
         top: -370px
         margin: unset
 
@@ -244,10 +280,12 @@ div.ncfm.virus
         grid-row: 6 / span 1
 
 #choice-science
-    left: 312px
+    left: calc(312/1920*100%)
+    width: calc(416/1920*100%)
 
 #choice-formula
-    right: 83px
+    right: calc(83/1920*100%)
+    width: 25%
 
 #choice-quotes
     position: absolute
@@ -255,7 +293,25 @@ div.ncfm.virus
     top: -100%
     right: 0
 
+#universiada-formula
+    position: absolute
+    right: calc(83/1920*100%)
+    width: calc(309/1920*100%)
+    top: 62px
+
 #universiada-img
+    // & > img
+    //     width: 100%
+    //     position: absolute
+    //     right: 134px
+
+    //     @media (width < 1544px)
+    //         right: 0
+
+    //     @media ($MOBILE)
+    //         position: static
+    //         width: unset
+
     @media ($DESCTOP)
         grid-area: 2 / 1 / 4 / 2
 
@@ -284,10 +340,25 @@ div.ncfm.virus
         grid-area: 4/1/5/2
 
 #comfort-buildings
-    +wid(375px)
+    // position: absolute
+    // right: 120px
+    // +wid(375px)
+    // & > img
+    //     width: 100%
+    //     position: absolute
+    //     right: 134px
+
+    //     @media (width < 1544px)
+    //         right: 0
+
+    //     @media ($MOBILE)
+    //         position: static
+    //         width: unset
+
     @media ($DESCTOP)
         +wid(434px)
         grid-area: 1/1/3/2
+
 #lhc
     @media ($DESCTOP)
         grid-area: 4 / 1 / 5 / 4

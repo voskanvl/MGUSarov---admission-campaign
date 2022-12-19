@@ -2,7 +2,8 @@
 .atmocphere.ncfm.texture
     //- .ncfm__background
     img.bg.bg__up(src="../../../assets/images/Ripped_White_Paper_8 6.png")
-    img.bg.bg__down(src="../../../assets/images/Ripped_White_Paper_8 6.png", style="transform: rotate(180deg);")
+    img.bg.bg__down(src="../../../assets/images/Ripped_White_Paper_8 6.png", style="transform: rotateZ(180deg) rotateY(180deg);")
+    img#atmocphere-science(src="../../../assets/svg/atmosphere/sience-science-rus.svg")
     .ncfm__content 
         .ncfm__block 
             img.ncfm__img#atmosphere-quotes(src="../../../assets/svg/atmosphere/quotes.svg")
@@ -10,7 +11,7 @@
             .ncfm__item «По атмосфере похоже на детский лагерь,  но с жесткой ответственностью за выполнение учебного плана», — рассказывает одна из студенток. Naked Science поговорил с магистрантами о поступлении, направлениях научной работы, учебе и перспективах.
         .ncfm__block#main-building
             //- img.ncfm__img(src="../../../assets/images/atmosphere/atmosphere.png")
-            img.ncfm__img.ncfm__img--desctop(src="../../../assets/images/atmosphere/atmosphere.png")
+            img.ncfm__img.ncfm__shift.ncfm__img--desctop(src="../../../assets/images/atmosphere/atmosphere.png")
             img.ncfm__img.ncfm__img--mobile(src="../../../assets/images/atmosphere/atmosphere-m.png")
         .ncfm__block
             .ncfm__item Новый филиал 
@@ -19,27 +20,9 @@
                 strong Всероссийский научно-исследовательский институт экспериментальной физики (РФЯЦ-ВНИИЭФ), а также 
                 strong Национальный центр физики и математики 
                 | (НЦФМ), где уже идет строительство научных установок миди- и мега-сайенс класса. Эти масштабные проекты требуют специалистов по разным направлениям фундаментальной физики, математики, а также вычислительным и суперкомпьютерным технологиям.
+        .ncfm__block
+            .ncfm__item Подготовкой молодых ученых занялся МГУ Саров. Этой осенью в филиале второй раз в истории отпраздновали День первокурсника для студентов магистратуры и впервые приняли аспирантов. Шестьдесят молодых ученых — 50 магистрантов и 10 аспирантов — присоединились к 46 магистрантам-второкурсникам и уже влились в учебу. В следующем году набор будет значительно больше.
         .ncfm__block.ncfm-image#mgu-sarov-building
             img.ncfm__img.ncfm__img--desctop(src="../../../assets/images/atmosphere/mgu-sarov.jpg")
             img.ncfm__img.ncfm__img--mobile(src="../../../assets/images/atmosphere/mgu-sarov-m.jpg")
 
-
-//- .atmosphere
-//-     .atmosphere__back
-//-     .atmosphere__back.atmosphere__back--turn
-//-     img.atmosphere__formula.atmosphere__svg(src="../../../assets/svg/atmosphere/t-2t-mc2.svg")
-//-     .atmosphere__images#building-paper-circle-out
-//-         img.atmosphere__img(src="../../../assets/images/atmosphere/atmosphere.png")
-//-     .atmosphere__content 
-//-         .atmosphere__text 
-//-             img.atmosphere__quotes.atmosphere__svg(src="../../../assets/svg/atmosphere/quotes.svg")
-//-             p!= atmosphere[0]
-//-             .atmosphere__images#building-paper-circle-in
-//-                 img.atmosphere__img(src="../../../assets/images/atmosphere/atmosphere-mobile.png")
-//-                 img.atmosphere__img#since-circle(src="../../../assets/svg/atmosphere/circle.svg")
-//-             p!= atmosphere[1]
-//-             .atmosphere__images 
-//-                 img.atmosphere__img#building-in(src="../../../assets/images/atmosphere/building.jpg")
-//-             p!= atmosphere[2]
-//-     img.atmosphere__science(src="../../../assets/svg/atmosphere/sience-science-rus.svg")
-//-     img#building-out(src="../../../assets/images/atmosphere/building.jpg")
