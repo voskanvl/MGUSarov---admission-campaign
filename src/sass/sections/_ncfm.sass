@@ -66,6 +66,13 @@
         position: relative
         &--wopad
             padding: 0px
+            & > .ncfm__svg
+                @media ($MOBILE)
+                    height: 300px
+            & + .ncfm__block
+                @media ($MOBILE)
+                    margin-top: 100px
+
         @media ($DESCTOP)
             grid-column: 2 / span 1
 
@@ -90,7 +97,8 @@
         margin: 0 auto
 
         &--desctop
-            +wid($MAX_WIDTH, 100%)
+            // +wid($MAX_WIDTH, 100%)
+            width: min(1269px,70vw)
             @media ($MOBILE)
                 display: none
 
@@ -129,13 +137,14 @@
 
         @media ($MOBILE)
             position: static
-            width: unset
+            +wid(375px)
 
     &.ncfm
         padding-top: 8vw
 
     &.choice
-        padding-top: 0
+        padding-top: 80px
+
     &.dowhat
         padding-top: 0
     &.universiada
@@ -185,6 +194,11 @@ div.ncfm.virus
     @media ($MOBILE)
         padding-top: 12vw
 
+#mgu-sarov-building
+    & > img
+        @media ($MOBILE)
+            width: 100%
+
 #atmocphere-science
     position: absolute
     z-index: 0
@@ -193,14 +207,14 @@ div.ncfm.virus
     width: 80%
     @media ($MOBILE)
         width: 80%
-        bottom: -18px
+        bottom: -7px
 
 #atmosphere-quotes
     position: absolute
-    width: clamp(104px,190/1024*100vw,190px)
+    width: clamp(104px,190/1024*100vw,160px)
     z-index: -1
     top: -70px
-    left: -120px
+    left: -100px
     @media ($MOBILE)
         left: 0
         top: -20px
@@ -222,6 +236,7 @@ div.ncfm.virus
     @media ($MOBILE)
         top: -180px
         height: 700px
+        left: -170px
 
 #virus-quotes
     position: absolute
@@ -249,14 +264,20 @@ div.ncfm.virus
 #virus-k-s
     position: absolute
     top: 0px
-    left: 10vw
+    left: -500px
 
 #main-building
     & > img
         width: 130%
         right: 0
+        top: 50%
+        translate: 0 -50%
         @media (width < 1573px)
             width: 100%
+        @media ($MOBILE)
+            position: static
+            +wid(375px)
+            translate: 0 0
 
     @media ($DESCTOP)
         grid-area: 1/1/3/2
@@ -268,7 +289,7 @@ div.ncfm.virus
 #Rutherford
     +wid(375px)
     @media ($DESCTOP)
-        width: min(728/1440*100vw,728px)
+        width: min(728/1440*100vw,599px)
         position: absolute
         z-index: -1
         left: -48vw
@@ -278,20 +299,36 @@ div.ncfm.virus
 #choice-image
     @media ($DESCTOP)
         grid-row: 6 / span 1
+        & > img
+            width: 70vw
 
 #choice-science
-    left: calc(312/1920*100%)
-    width: calc(416/1920*100%)
+    // left: calc(312/1920*100%)
+    // width: calc(416/1920*100%)
+    width: 100%
+    & > img
+        width: min(416px,100%)
+    @media ($DESCTOP)
+        grid-area: 1/1/2/2
 
 #choice-formula
-    right: calc(83/1920*100%)
-    width: 25%
+    right: calc(70/1920*100%)
+    width: 20%
+    top: -46px
 
 #choice-quotes
     position: absolute
     width: clamp(82px,172/1024*100vw,172px)
     top: -100%
     right: 0
+
+#ncfm-bomb
+    position: absolute
+    left: 0%
+    top: 280px
+    width: 32%
+    @media ($DESCTOP)
+        grid-area: 2/1/3/2
 
 #universiada-formula
     position: absolute
@@ -300,17 +337,6 @@ div.ncfm.virus
     top: 62px
 
 #universiada-img
-    // & > img
-    //     width: 100%
-    //     position: absolute
-    //     right: 134px
-
-    //     @media (width < 1544px)
-    //         right: 0
-
-    //     @media ($MOBILE)
-    //         position: static
-    //         width: unset
 
     @media ($DESCTOP)
         grid-area: 2 / 1 / 4 / 2
@@ -338,6 +364,7 @@ div.ncfm.virus
     @media ($DESCTOP)
         +wid(306px)
         grid-area: 4/1/5/2
+        place-self: center start
 
 #comfort-buildings
     // position: absolute
@@ -372,9 +399,20 @@ div.ncfm.virus
     left: 0
 
 #double-circle
-    bottom: -30px
-    left: -720px
-    z-index: 1
+    // bottom: -30px
+    // z-index: 1
+    // +wid(594px, 80%)
+    @media ($DESCTOP)
+        grid-column: 1 / 2
+        & > img
+            z-index: 1
+            left: -25%
+            width: 135%
+            top: 50%
+            translate: 0 -50%
+            @media (width < 1525px)
+                width: 100%
+                left: 11%
 
 #blacksmith-pluses
     bottom: -60px
